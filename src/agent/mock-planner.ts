@@ -112,6 +112,7 @@ function findTool(tools: Tool[], name: string): void {
 }
 
 export class MockPlanner implements Planner {
+  constructor(private allowRecovery = false) {}
   async plan({
     request,
     tools,
@@ -274,8 +275,13 @@ export class MockPlanner implements Planner {
     return [];
   }
 
-  async recover(): Promise<PlanStep | null> {
-    // Deterministic mock recovery gives up rather than calling an LLM.
-    return null;
+  async recover(input: {
+    request: string;
+    step: PlanStep;
+    error: string;
+    tools: Tool[];
+  }): Promise<PlanStep | null> {
+    // Retry the failed step when recovery mode is enabled.
+    return this.allowRecovery ? input.step : null;
   }
 }

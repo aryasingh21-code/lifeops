@@ -15,8 +15,14 @@ import { createMockTools } from "./tools/mock.js";
 async function main() {
   const args = process.argv.slice(2);
   const mock = args.includes("--mock");
+  const failCalendar = args.includes("--fail-calendar");
+  const recoverCalendar = args.includes("--recover-calendar");
+
   const request = args
-    .filter((a) => a !== "--mock")
+    .filter(
+      (a) =>
+        a !== "--mock" && a !== "--fail-calendar" && a !== "--recover-calendar",
+    )
     .join(" ")
     .trim();
 
@@ -47,8 +53,12 @@ async function main() {
     await postgresCheckpointer.setup();
   }
 
-  const tools = mock ? createMockTools() : realTools;
-  const planner = mock ? new MockPlanner() : new AnthropicPlanner();
+  const tools = mock
+    ? createMockTools(failCalendar ? { calendar_list_events: 3 } : {})
+    : realTools;
+  const planner = mock
+    ? new MockPlanner(recoverCalendar)
+    : new AnthropicPlanner();
 
   const graph = buildGraph({
     tools,
