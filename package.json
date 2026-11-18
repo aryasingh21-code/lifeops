@@ -1,0 +1,40 @@
+{
+  "name": "lifeops",
+  "version": "0.1.0",
+  "description": "LifeOps – Personal AI execution agent (LangGraph.js, Gmail, Google Calendar, MCP)",
+  "main": "dist/src/cli.js",
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc",
+    "start": "node dist/src/cli.js",
+    "mcp": "tsx src/mcp/server.ts",
+    "eval": "tsx src/eval/run.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@langchain/anthropic": "^1.6.5",
+    "@langchain/core": "^1.4.1",
+    "@langchain/langgraph": "^1.7.5",
+    "@langchain/langgraph-checkpoint-postgres": "^1.1.4",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "dotenv": "^18.0.10",
+    "googleapis": "^190.0.0",
+    "pg": "^8.23.1",
+    "playwright": "^1.65.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  }
+}

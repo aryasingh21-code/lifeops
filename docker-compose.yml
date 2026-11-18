@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: lifeops
+      POSTGRES_PASSWORD: lifeops
+      POSTGRES_DB: lifeops
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lifeops"]
+      interval: 3s
+      retries: 10
+
+  app:
+    build: .
+    profiles: ["app"]
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://lifeops:lifeops@db:5432/lifeops
+    depends_on:
+      db:
+        condition: service_healthy
+    stdin_open: true
+    tty: true
+    entrypoint: ["node", "dist/src/cli.js"]
+
+volumes:
+  pgdata:

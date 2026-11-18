@@ -1,0 +1,399 @@
+[
+  {
+    "id": "s01",
+    "request": "Find unread emails from my manager from the last 7 days",
+    "expectedTools": [
+      "gmail_search"
+    ]
+  },
+  {
+    "id": "s02",
+    "request": "Search my inbox for invoices from Amazon this month",
+    "expectedTools": [
+      "gmail_search"
+    ]
+  },
+  {
+    "id": "s03",
+    "request": "Show emails with attachments from professor.rao@example.com",
+    "expectedTools": [
+      "gmail_search"
+    ]
+  },
+  {
+    "id": "s04",
+    "request": "Find the latest email from my bank about a statement",
+    "expectedTools": [
+      "gmail_search"
+    ]
+  },
+  {
+    "id": "s05",
+    "request": "Look for emails mentioning 'offer letter' from the last 30 days",
+    "expectedTools": [
+      "gmail_search"
+    ]
+  },
+  {
+    "id": "s06",
+    "request": "Do I have any unread emails from recruiting@example.com?",
+    "expectedTools": [
+      "gmail_search"
+    ]
+  },
+  {
+    "id": "s07",
+    "request": "Find emails about my flight booking to Hyderabad",
+    "expectedTools": [
+      "gmail_search"
+    ]
+  },
+  {
+    "id": "s08",
+    "request": "Search for emails from GitHub about security alerts this week",
+    "expectedTools": [
+      "gmail_search"
+    ]
+  },
+  {
+    "id": "s09",
+    "request": "What is on my calendar tomorrow?",
+    "expectedTools": [
+      "calendar_list_events"
+    ]
+  },
+  {
+    "id": "s10",
+    "request": "Show my meetings for next Monday",
+    "expectedTools": [
+      "calendar_list_events"
+    ]
+  },
+  {
+    "id": "s11",
+    "request": "Am I free on Friday between 2pm and 5pm?",
+    "expectedTools": [
+      "calendar_list_events"
+    ]
+  },
+  {
+    "id": "s12",
+    "request": "List all events on my calendar this week",
+    "expectedTools": [
+      "calendar_list_events"
+    ]
+  },
+  {
+    "id": "s13",
+    "request": "What does my day look like today?",
+    "expectedTools": [
+      "calendar_list_events"
+    ]
+  },
+  {
+    "id": "s14",
+    "request": "Check my calendar for the 25th of this month",
+    "expectedTools": [
+      "calendar_list_events"
+    ]
+  },
+  {
+    "id": "s15",
+    "request": "Schedule a 30 minute meeting called Project Sync with alice@example.com tomorrow at 3pm",
+    "expectedTools": [
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s16",
+    "request": "Schedule a 1 hour focus block this Friday at 10am",
+    "expectedTools": [
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s17",
+    "request": "Set up a 45 minute 1:1 with bob@example.com on Tuesday at 11am",
+    "expectedTools": [
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s18",
+    "request": "Book a 2 hour study session on Sunday at 4pm called Exam Prep",
+    "expectedTools": [
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s19",
+    "request": "Add a dentist appointment on Thursday at 5pm for 1 hour",
+    "expectedTools": [
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s20",
+    "request": "Schedule a call with carol@example.com on Wednesday at 4pm for 30 minutes called Design Review",
+    "expectedTools": [
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s21",
+    "request": "Block 90 minutes on Saturday morning at 9am for gym",
+    "expectedTools": [
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s22",
+    "request": "Draft an email to bob@example.com asking for the Q3 report",
+    "expectedTools": [
+      "gmail_create_draft"
+    ]
+  },
+  {
+    "id": "s23",
+    "request": "Draft a thank-you note to hr@example.com for the interview opportunity",
+    "expectedTools": [
+      "gmail_create_draft"
+    ]
+  },
+  {
+    "id": "s24",
+    "request": "Write a draft to prof@example.com requesting an extension on the assignment",
+    "expectedTools": [
+      "gmail_create_draft"
+    ]
+  },
+  {
+    "id": "s25",
+    "request": "Draft an email to dave@example.com asking to reschedule our meeting to next week",
+    "expectedTools": [
+      "gmail_create_draft"
+    ]
+  },
+  {
+    "id": "s26",
+    "request": "Draft an email to support@example.com reporting that my order has not arrived",
+    "expectedTools": [
+      "gmail_create_draft"
+    ]
+  },
+  {
+    "id": "s27",
+    "request": "Send an email to carol@example.com saying I will be 10 minutes late",
+    "expectedTools": [
+      "gmail_send"
+    ]
+  },
+  {
+    "id": "s28",
+    "request": "Send a quick email to eve@example.com confirming I will attend the workshop",
+    "expectedTools": [
+      "gmail_send"
+    ]
+  },
+  {
+    "id": "s29",
+    "request": "Email frank@example.com that the report is attached in the shared drive and send it now",
+    "expectedTools": [
+      "gmail_send"
+    ]
+  },
+  {
+    "id": "s30",
+    "request": "Send a message to team@example.com saying the deployment is complete",
+    "expectedTools": [
+      "gmail_send"
+    ]
+  },
+  {
+    "id": "s31",
+    "request": "Send grace@example.com a reminder that rent is due on the 1st",
+    "expectedTools": [
+      "gmail_send"
+    ]
+  },
+  {
+    "id": "s32",
+    "request": "Find the latest email from HR about the benefits deadline and block time on my calendar for it",
+    "expectedTools": [
+      "gmail_search",
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s33",
+    "request": "Find my interview confirmation email and add it to my calendar",
+    "expectedTools": [
+      "gmail_search",
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s34",
+    "request": "Search for the email about the team offsite and put it on my calendar",
+    "expectedTools": [
+      "gmail_search",
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s35",
+    "request": "Find the latest webinar invite in my inbox and add it to my calendar",
+    "expectedTools": [
+      "gmail_search",
+      "calendar_list_events",
+      "calendar_create_event"
+    ]
+  },
+  {
+    "id": "s36",
+    "request": "Open https://example.com and email me a summary at me@example.com",
+    "expectedTools": [
+      "browse_page",
+      "gmail_send"
+    ]
+  },
+  {
+    "id": "s37",
+    "request": "Read https://example.org and draft an email to me@example.com with the key points",
+    "expectedTools": [
+      "browse_page",
+      "gmail_create_draft"
+    ]
+  },
+  {
+    "id": "s38",
+    "request": "Open https://example.com and tell me what the page says",
+    "expectedTools": [
+      "browse_page"
+    ]
+  },
+  {
+    "id": "s39",
+    "request": "Look at https://example.net and send the main heading to me@example.com",
+    "expectedTools": [
+      "browse_page",
+      "gmail_send"
+    ]
+  },
+  {
+    "id": "s40",
+    "request": "Check my calendar for next Monday and email dave@example.com my free slots",
+    "expectedTools": [
+      "calendar_list_events",
+      "gmail_send"
+    ]
+  },
+  {
+    "id": "s41",
+    "request": "Check my calendar for Thursday and draft an email to bob@example.com proposing a meeting time",
+    "expectedTools": [
+      "calendar_list_events",
+      "gmail_create_draft"
+    ]
+  },
+  {
+    "id": "s42",
+    "request": "Look at my schedule for tomorrow and send a summary to me@example.com",
+    "expectedTools": [
+      "calendar_list_events",
+      "gmail_send"
+    ]
+  },
+  {
+    "id": "s43",
+    "request": "Find emails from the bank this week",
+    "expectedTools": [
+      "gmail_search"
+    ],
+    "failures": {
+      "gmail_search": 1
+    }
+  },
+  {
+    "id": "s44",
+    "request": "Send an email to ivan@example.com saying thanks for the update",
+    "expectedTools": [
+      "gmail_send"
+    ],
+    "failures": {
+      "gmail_send": 2
+    }
+  },
+  {
+    "id": "s45",
+    "request": "What is on my calendar on Wednesday?",
+    "expectedTools": [
+      "calendar_list_events"
+    ],
+    "failures": {
+      "calendar_list_events": 1
+    }
+  },
+  {
+    "id": "s46",
+    "request": "Draft an email to judy@example.com asking about the project timeline",
+    "expectedTools": [
+      "gmail_create_draft"
+    ],
+    "failures": {
+      "gmail_create_draft": 2
+    }
+  },
+  {
+    "id": "s47",
+    "request": "Schedule a 1 hour focus block this Friday at 10am",
+    "expectedTools": [
+      "calendar_list_events",
+      "calendar_create_event"
+    ],
+    "failures": {
+      "calendar_create_event": 3
+    }
+  },
+  {
+    "id": "s48",
+    "request": "Send an email to ken@example.com saying the meeting is moved to 4pm",
+    "expectedTools": [
+      "gmail_send"
+    ],
+    "failures": {
+      "gmail_send": 3
+    }
+  },
+  {
+    "id": "s49",
+    "request": "Search for emails about my scholarship application",
+    "expectedTools": [
+      "gmail_search"
+    ],
+    "failures": {
+      "gmail_search": 3
+    }
+  },
+  {
+    "id": "s50",
+    "request": "Schedule a 30 minute sync with leo@example.com on Monday at 2pm",
+    "expectedTools": [
+      "calendar_list_events",
+      "calendar_create_event"
+    ],
+    "failures": {
+      "calendar_list_events": 3
+    }
+  }
+]
